@@ -79,22 +79,26 @@ header .header-container .purchase-buttons {
   display: flex;
   justify-content: space-evenly;
   width: 20%;
+  height: 1.8rem;
   position: relative;
   bottom: 0.4rem;
 }
-header .header-container .purchase-buttons .cart {
+header .header-container .purchase-buttons .cart-svg {
   background-color: #FF6622;
   border-radius: 36px;
   width: 25%;
+  cursor: pointer;
 }
-header .header-container .purchase-buttons .cart .cart-svg {
-  width: 1.4rem;
-  height: 1.4rem;
+header .header-container .purchase-buttons .cart-svg:hover {
+  transition: 0.6s;
+  background-color: #374048;
 }
-header .header-container .purchase-buttons .cart .cart-svg svg {
+header .header-container .purchase-buttons .cart-svg svg {
+  width: 100%;
+  height: 100%;
   position: relative;
-  top: 20%;
-  left: 30%;
+  top: 10%;
+  left: 20%;
   fill: #fff;
 }
 header .header-container .purchase-buttons .buyit {
@@ -102,13 +106,20 @@ header .header-container .purchase-buttons .buyit {
   border-radius: 36px;
   width: 50%;
   padding: 0.2rem 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .header-container .purchase-buttons .buyit:hover {
+  transition: 0.6s;
+  background-color: #131313;
 }
 header .header-container .purchase-buttons .buyit span {
   color: #ededed;
   font-weight: 500;
   font-size: 0.9rem;
   position: relative;
-  left: 4%;
 }
 
 main .section-one {
@@ -134,7 +145,7 @@ main .section-one .section-subtitle p {
   margin: 0;
   color: #929292;
 }
-main .section-one .section-button {
+main .section-one .paypal-button {
   background-color: #0084FF;
   color: #fff;
   border-radius: 36px;
@@ -142,14 +153,113 @@ main .section-one .section-button {
   height: 3rem;
   padding: 0.2rem 0.8rem;
   margin: 2rem auto;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-main .section-one .section-button span {
+main .section-one .paypal-button span {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 main .section-one .section-img {
+  display: flex;
+  width: 30%;
   margin: auto;
+}
+main .section-two {
+  width: 70%;
+  margin: 4rem auto;
+}
+main .section-two .section-header .header-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #374048;
+}
+main .section-two .section-header .header-title h1 {
+  margin: 0;
+}
+main .section-two .section-header .header-subtitle {
+  text-align: center;
+  font-size: 1.24rem;
+  width: 64%;
+  margin: auto;
+  font-weight: 200;
+}
+main .section-two .section-header .header-subtitle p {
+  margin: 0;
+  color: #929292;
+}
+main .section-two .section-header .section-separator {
+  width: 100%;
+  height: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.4rem;
+}
+main .section-two .section-header .section-separator span {
+  display: block;
+  width: 6rem;
+  height: 0.6rem;
+  background-color: #bbbbbb;
+  border-radius: 2px;
+}
+main .section-two .section-features-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+main .section-two .section-features-container .feature {
+  width: 30%;
+}
+main .section-two .section-features-container .feature .feature-img {
+  width: 100%;
+  height: 10rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section-two .section-features-container .feature .feature-img img {
+  width: 5.6rem;
+  height: 5.6rem;
+}
+main .section-two .section-features-container .feature .feature-title {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #374048;
+  margin-bottom: 0.5rem;
+}
+main .section-two .section-features-container .feature .feature-title h2 {
+  margin: 0;
+}
+main .section-two .section-features-container .feature .feature-subtitle {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  font-weight: 200;
+}
+main .section-two .section-features-container .feature .feature-subtitle p {
+  margin: 0;
+  color: #4d4d4d;
+}
+main .section-two .section-features-container .arrow {
+  margin-top: 4rem;
+}
+main .section-two .section-features-container .arrow span:nth-child(1) {
+  background-color: #3c3c3c;
+  width: 1.1rem;
+  height: 1px;
+  display: block;
+  transform: rotate(45deg);
+}
+main .section-two .section-features-container .arrow span:nth-child(2) {
+  background-color: #3c3c3c;
+  width: 1.1rem;
+  height: 1px;
+  display: block;
+  transform: rotate(-45deg);
+  margin-top: 0.7rem;
 }
 
 /*# sourceMappingURL=style.css.map */

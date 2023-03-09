@@ -94,25 +94,28 @@ header {
             display: flex;
             justify-content: space-evenly;
             width: 20%;
+            height: 1.8rem;
             position: relative;
             bottom: .4rem;
 
-            .cart {
+            .cart-svg {
                 background-color: #FF6622;
                 border-radius: 36px;
                 width: 25%;
-                
+                cursor: pointer;
 
-                .cart-svg {
-                    width: 1.4rem;
-                    height: 1.4rem;
+                &:hover {
+                    transition: .6s;
+                    background-color: #374048;
+                }
 
-                    svg {
-                        position: relative;
-                        top: 20%;
-                        left: 30%;
-                        fill: #fff;
-                    }
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    top: 10%;
+                    left: 20%;
+                    fill: #fff;
                 }
             }
 
@@ -121,13 +124,21 @@ header {
                 border-radius: 36px;
                 width: 50%;
                 padding: .2rem .8rem;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    transition: .6s;
+                    background-color: #131313;
+                }
 
                 span {
                     color: #ededed;
                     font-weight: 500;
                     font-size: .9rem;
                     position: relative;
-                    left: 4%;
                 }
             }
         }
@@ -165,7 +176,7 @@ main {
             }
         }
 
-        .section-button {
+        .paypal-button {
             background-color: #0084FF;
             color: #fff;
             border-radius: 36px;
@@ -173,16 +184,139 @@ main {
             height: 3rem;
             padding: .2rem .8rem;
             margin: 2rem auto;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             span {
                 font-size: 1.2rem;
-                font-weight: 500;
+                font-weight: 600;
             }
         }
 
         .section-img {
+            display: flex;
+            width: 30%;
             margin: auto;
+        }
+    }
+
+    .section-two {
+        width: 70%;
+        margin: 4rem auto;
+
+        .section-header {
+
+            .header-title {
+                text-align: center;
+                font-size: 1.8rem;
+                color: #374048;
+    
+                h1 {
+                    margin: 0;
+                }
+            }
+    
+            .header-subtitle {
+                text-align: center;
+                font-size: 1.24rem;
+                width: 64%;
+                margin: auto;
+                font-weight: 200;
+    
+                p {
+                    margin: 0;
+                    color: #929292;
+                }
+            }
+
+            .section-separator {
+                width: 100%;
+                height: .6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: .4rem;
+                
+                span {
+                    display: block;
+                    width: 6rem;
+                    height: .6rem;
+                    background-color: #bbbbbb;
+                    border-radius: 2px;
+                }
+            }
+        }
+
+        .section-features-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+
+            .feature {
+                width: 30%;
+
+                .feature-img {
+                    width: 100%;
+                    height: 10rem;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 5.6rem;
+                        height: 5.6rem;
+                    }
+                }
+
+                .feature-title {
+                    text-align: center;
+                    font-size: 1.2rem;
+                    color: #374048;
+                    margin-bottom: .5rem;
+
+                    h2 {
+                        margin: 0;
+                    }
+                }
+
+                .feature-subtitle {
+                    text-align: center;
+                    width: 100%;
+                    margin: auto;
+                    font-weight: 200;
+    
+                    p {
+                        margin: 0;
+                        color: #4d4d4d;
+                    }
+                }
+            }
+
+            .arrow {
+                margin-top: 4rem;
+
+                // Seleccionamos el primer span hijo y luego el segundo:
+                span:nth-child(1) {
+                    // Parte de arriba de la flecha que es un span con un backgroun y una horientación de 45º:
+                    background-color: #3c3c3c;
+                    width: 1.1rem;
+                    height: 1px;
+                    display: block;
+                    transform: rotate(45deg);
+                }
+
+                span:nth-child(2) {
+                    // Parte de abajo de la flecha:
+                    background-color: #3c3c3c;
+                    width: 1.1rem;
+                    height: 1px;
+                    display: block;
+                    transform: rotate(-45deg);
+                    margin-top: .7rem;
+                }
+            }
         }
     }
 }
